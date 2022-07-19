@@ -39,3 +39,9 @@ set the ttl **longer** than the TTL to the node whose IP address is in your area
 nslookup -vc t.co {dns-server}
 ```
 this command can test whether the server supports Dns over **Tcp**.
+
+- [Google](dns.google) <kbd>8.8.8.8</kbd> <kbd>8.8.4.4</kbd>
+- [Cloudflare](developers.cloudflare.com/1.1.1.1/) <kbd>1.1.1.1</kbd> <kbd>1.0.0.1</kbd>
+- [DNS.SB](dns.sb) <kbd>185.222.222.222</kbd> <kbd>45.11.45.11</kbd>
+- [Quad 101](101.101.101.101) <kbd>101.101.101.101</kbd> <kbd>101.102.103.104</kbd>
+- [114 Dns](114dns.com)  <kbd>114.114.114.114</kbd>
