@@ -17,7 +17,7 @@ run install.bat to install the service
   ip:port           #this ip:port will send fake packet when creating connection
   method=*          #the methods to modify TCP
   ```
-### methods:
+## methods:
 ```
   ttl               #the fake tcp packets will use the TTL you set
   w-md5             #the fake tcp packets will have a wrong md5 option
@@ -29,5 +29,13 @@ run install.bat to install the service
   https             #the domain below will be move to https when using http on port 80
 ```
 ## How to get the TTL
-tracert 8.8.8.8  
-set the ttl longer than the TTL to the node whose IP address is in your area and shorter than the TTL to the server.
+```
+tracert 8.8.8.8
+```
+set the ttl **longer** than the TTL to the node whose IP address is in your area and **shorter** than the TTL to the server.
+
+## Which DNS server should I use
+```
+nslookup -vc t.co {dns-server}
+```
+this command can test whether the server supports Dns over **Tcp**.
