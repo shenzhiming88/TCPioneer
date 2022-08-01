@@ -20,6 +20,12 @@ jobs:
 
     - name: get config
       run: mv ./release/* ./
+      
+    - name: download WinDivert.dll
+      run: |
+        Invoke-WebRequest -v -o ./WinDivert.zip https://github.com/basil00/Divert/releases/download/v1.4.3/WinDivert-1.4.3-A.zip
+        Expand-Archive ./WinDivert.zip -DestinationPath ./
+        mv WinDivert-1.4.3-A/x86_64/WinDivert.dll ./
 
     - uses: actions/upload-artifact@v3
       with:
@@ -32,3 +38,4 @@ jobs:
           start_service.bat
           stop_service.bat
           WinDivert64.sys
+          WinDivert.dll
